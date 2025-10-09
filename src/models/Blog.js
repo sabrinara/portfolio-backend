@@ -1,13 +1,12 @@
 import { Schema, model } from 'mongoose';
 
-
 const BlogSchema = new Schema({
-date: { type: Date },
-title: { type: String },
-url: { type: String },
-image: { type: String },
-details: { type: String },
+  date: { type: Date, default: Date.now },
+  title: { type: String, required: true },
+  url: { type: String, required: true },
+  image: { type: String },
+  details: { type: String },
+  tags: { type: [String], default: [] }   
 });
-
 
 export default model('Blog', BlogSchema);
