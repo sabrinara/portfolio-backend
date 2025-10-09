@@ -11,24 +11,26 @@ https://github.com/faisal-akbar/b5a7-server?tab=readme-ov-file
 
 
 ### Structure
+
+```plaintext
 portfolio-backend/
 │
 ├── src/
 │   ├── config/
-│   │   ├── cloudinary.js
-│   │   └── db.js
+│   │   ├── cloudinary.js         # Cloudinary configuration
+│   │   └── db.js                 # Database connection
 │   │
 │   ├── middleware/
-│   │   └── authMiddleware.js
+│   │   └── authMiddleware.js     # Authentication middleware
 │   │
-│   ├── models/
+│   ├── models/                   # Mongoose models
 │   │   ├── Intro.js
 │   │   ├── Experience.js
 │   │   ├── Project.js
 │   │   ├── Achievement.js
 │   │   └── Blog.js
 │   │
-│   ├── routes/
+│   ├── routes/                   # API routes
 │   │   ├── introRoutes.js
 │   │   ├── experienceRoutes.js
 │   │   ├── projectRoutes.js
@@ -36,7 +38,7 @@ portfolio-backend/
 │   │   ├── blogRoutes.js
 │   │   └── authRoutes.js
 │   │
-│   ├── controllers/
+│   ├── controllers/              # Controllers
 │   │   ├── introController.js
 │   │   ├── experienceController.js
 │   │   ├── projectController.js
@@ -44,11 +46,10 @@ portfolio-backend/
 │   │   ├── blogController.js
 │   │   └── authController.js
 │   │
-│   └── index.js
+│   └── index.js                  # Entry point
 │
-├── .env
+├── .env                          # Environment variables
 ├── package.json
 └── README.md
 
-
-
+```
