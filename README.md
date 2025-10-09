@@ -36,7 +36,8 @@ portfolio-backend/
 │   │   ├── projectRoutes.js
 │   │   ├── achievementRoutes.js
 │   │   ├── blogRoutes.js
-│   │   └── authRoutes.js
+│   │   ├── authRoutes.js
+│   │   └── uploadRoutes.js
 │   │
 │   ├── controllers/              # Controllers
 │   │   ├── introController.js
@@ -44,9 +45,10 @@ portfolio-backend/
 │   │   ├── projectController.js
 │   │   ├── achievementController.js
 │   │   ├── blogController.js
-│   │   └── authController.js
+│   │   ├── authController.js
+│   │   └── uploadController.js
 │   │
-│   └── index.js                  # Entry point
+│   └── server.js                  # Entry point
 │
 ├── .env                          # Environment variables
 ├── package.json
