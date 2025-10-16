@@ -9,7 +9,8 @@ const KeyFeatureSchema = new Schema({
 const ProjectSchema = new Schema({
   title: { type: String, required: true },
   imageArray: [{ type: String }],
-  type: { type: String },
+  type: { type: String, enum: ['company', 'team', 'personal'], default: 'personal' },
+  technologyType: { type: String },
   subTitle: { type: String },
   description: { type: String },
   keyFeatures: [KeyFeatureSchema],
