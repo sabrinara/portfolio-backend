@@ -3,6 +3,7 @@ import { Schema, model } from 'mongoose';
 const ExperienceSchema = new Schema(
   {
     title: { type: String },
+    subTitle: {type: String},
     about: { type: String },
     startDate: { type: Date },
     // ✅ Allow both Date and String (e.g., "Present")
