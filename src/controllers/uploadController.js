@@ -1,5 +1,4 @@
 import cloudinary from '../config/cloudinary.js';
-import fs from 'fs';
 
 export async function uploadImage(req, res) {
   try {
@@ -7,13 +6,12 @@ export async function uploadImage(req, res) {
       return res.status(400).json({ message: 'No file provided' });
     }
 
-    // Upload directly from local path (multer stores the file temporarily)
-    const result = await cloudinary.uploader.upload(req.file.path, {
+    const b64 = Buffer.from(req.file.buffer).toString('base64');
+    const dataURI = `data:${req.file.mimetype};base64,${b64}`;
+
+    const result = await cloudinary.uploader.upload(dataURI, {
       folder: 'portfolio',
     });
-
-    // Remove temp file after upload
-    fs.unlinkSync(req.file.path);
 
     res.json({ url: result.secure_url });
   } catch (err) {

@@ -10,6 +10,7 @@ const ProjectSchema = new Schema({
   title: { type: String, required: true },
   imageArray: [{ type: String }],
   type: { type: String, enum: ['company', 'team', 'personal'], default: 'personal' },
+  category: { type: String, enum: ['Full Stack', 'Frontend', 'Backend', 'Django', 'MERN'], default: 'Full Stack' },
   technologyType: { type: String },
   subTitle: { type: String },
   description: { type: String },
