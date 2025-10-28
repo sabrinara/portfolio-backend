@@ -6,6 +6,13 @@ const KeyFeatureSchema = new Schema({
   details: { type: String },
 });
 
+// ✅ New schema for URLs
+const UrlSchema = new Schema({
+  website: { type: String, required: true },
+  frontend: { type: String },
+  backend: { type: String },
+});
+
 const ProjectSchema = new Schema(
   {
     title: { type: String, required: true },
@@ -25,8 +32,9 @@ const ProjectSchema = new Schema(
     description: { type: String },
     keyFeatures: [KeyFeatureSchema],
     technologies: [{ type: String }],
+    urls: [UrlSchema], // ✅ Added URL array
     date: { type: Date },
-    featuredProject: { type: Boolean, default: false }, // ✅ Added this
+    featuredProject: { type: Boolean, default: false },
   },
   { timestamps: true }
 );
