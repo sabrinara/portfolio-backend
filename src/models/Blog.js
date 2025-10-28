@@ -6,7 +6,8 @@ const BlogSchema = new Schema({
   url: { type: String, required: true },
   image: { type: String },
   details: { type: String },
-  tags: { type: [String], default: [] }   
+  view: { type: Number, default: 0 }, 
+  tags: { type: [String], default: [] }
 });
 
 export default model('Blog', BlogSchema);

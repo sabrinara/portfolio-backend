@@ -13,6 +13,7 @@ const introSchema = new mongoose.Schema(
     smallDetails: { type: String, required: true },
     image: { type: String }, 
     about_content: { type: String },
+    about_content_dark: { type: String },
     resume:{ type:String},
     socialLinks: [socialLinkSchema],
   },
