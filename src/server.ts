@@ -1,21 +1,21 @@
-import express from 'express';
-import cors from 'cors';
-import { config } from 'dotenv';
-import connectDB from './config/db.js';
+import express, { Request, Response } from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 
 // Route imports
-import authRoutes from './routes/authRoutes.js';
-import introRoutes from './routes/introRoutes.js';
-import experienceRoutes from './routes/experienceRoutes.js';
-import projectRoutes from './routes/projectRoutes.js';
-import achievementRoutes from './routes/achievementRoutes.js';
-import blogRoutes from './routes/blogRoutes.js';
-import uploadRoutes from './routes/uploadRoutes.js';
+import authRoutes from './routes/authRoutes.ts';
+import introRoutes from './routes/introRoutes.ts';
+import experienceRoutes from './routes/experienceRoutes.ts';
+import projectRoutes from './routes/projectRoutes.ts';
+import achievementRoutes from './routes/achievementRoutes.ts';
+import blogRoutes from './routes/blogRoutes.ts';
+import uploadRoutes from './routes/uploadRoutes.ts';
+import connectDB from "./config/db.ts";
 
-config(); // Load .env
-const app = express(); // ✅ Define app before using it
+dotenv.config();
 
 // Middleware
+const app = express();
 app.use(cors());
 app.use(express.json());
 

@@ -2,8 +2,8 @@ import express from 'express';
 const router = express.Router();
 import multer, { diskStorage } from 'multer';
 import { extname } from 'path';
-import auth from '../middleware/auth.js';
-import { uploadImage } from '../controllers/uploadController.js';
+import { uploadImage } from '../controllers/uploadController.ts';
+import auth from '../middleware/authMiddleware.ts';
 
 
 // Multer setup - store uploads in /tmp/uploads (ensure this folder exists)
