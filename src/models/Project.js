@@ -19,8 +19,8 @@ const ProjectSchema = new Schema(
     imageArray: [{ type: String }],
     type: {
       type: String,
-      enum: ['company', 'team', 'personal'],
-      default: 'personal',
+      enum: ['Company', 'Team', 'Personal'],
+      default: 'Personal',
     },
     category: {
       type: String,
